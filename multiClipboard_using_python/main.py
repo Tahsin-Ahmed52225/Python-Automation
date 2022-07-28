@@ -43,9 +43,10 @@ if len(sys.argv) == 2:
         print(data)
     elif command == "delete":
         #if the command is delete ask for a key and then if the key is valid , delete that info 
-        key = input("Enter your delete key")
+        key = input("Enter your delete key:")
         if key in data:
             del data[key]
+            save_data(SAVED_DATA,data)
         else:
             print("Invalid key")
 
